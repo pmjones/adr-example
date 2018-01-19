@@ -1,6 +1,6 @@
 # _Action Domain Responder_ Example
 
-This example shows an ADR user interface subsystem, with the corresponding domain logic and data source elements, for a naive blogging system.
+This example shows an [_Action Domain Responder_](http://pmjones.io/adr) user interface subsystem, with the corresponding domain logic and data source elements, for a naive blogging system.
 
 This is not a running example, in the sense that it cannot be dropped onto a web server and begin operating properly.
 
