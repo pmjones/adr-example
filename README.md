@@ -10,9 +10,9 @@ There is no authentication, authorization, or session mechanism included. While 
 
 ## _Action_
 
-The _Action_ classes depend on a 3rd-party HTTP Request object.
+The _Action_ classes depend on 3rd-party HTTP Request and Response interfaces.
 
-Each _Action_ picks apart the incoming request to pass individual typhinted _Domain_ method arguments. A differently-constructed _Domain_ might require a different input signature, such as a data transfer object or a catch-all array of all possible request values.
+Each _Action_ picks apart the incoming request to pass individual typehinted _Domain_ method arguments. A differently-constructed _Domain_ might require a different input signature, such as a data transfer object or a catch-all array of all possible request values.
 
 ## _Domain_
 
@@ -24,8 +24,8 @@ The domain logic uses a _Data Mapper_ for data source interactions (_BlogMapper_
 
 ## _Responder_
 
-The _Responder_ classes depend on a 3rd-party HTTP Response object.
+Each _Responder_ calls a method corresponding to the domain _Payload_ status to build the HTTP Response.
 
-Each _Responder_ will call a method corresponding to the domain _Payload_ status, which the _Responder_ will call as part of building the HTTP Response.
+The base _Responder_ class depends on a 3rd-party HTTP Request interface and Response object.
 
-The base _BlogResponder_ class depends on a 3rd-party PHP-based _Template View_ system.
+The base _BlogResponder_ class depends on a 3rd-party PHP-based _Template View_ system. The templates are located in `resources/templates/`.
