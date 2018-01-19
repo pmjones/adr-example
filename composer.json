@@ -1,0 +1,32 @@
+{
+    "name": "pmjones/adr",
+    "description": "An alternative to MVC for server-side applications.",
+    "homepage": "https://github.com/pmjones/adr",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul M. Jones",
+            "email": "pmjones@pmjones.io"
+        }
+    ],
+    "require": {
+        "aura/html": "~2.0",
+        "aura/view": "~2.0",
+        "zendframework/zend-diactoros": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "producer/githooks": "0.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pmjones\\Adr\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pmjones\\Adr\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev"
+}
