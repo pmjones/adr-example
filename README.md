@@ -16,11 +16,11 @@ Each _Action_ picks apart the incoming request to pass individual typhinted _Dom
 
 ## _Domain_
 
+The base _ApplicationService_ class protects all the "real" service methods behind the magic `__call()` method. This allows the service to implement some functionality common to all the service methods, such as exception handling, though it does get in the way of IDE auto-completion.
+
+The _BlogService_ methods return a domain _Payload_ that wraps the domain results and includes a status indicator. This standardizes the domain return signature, makes the _BlogResponder_ work much more readable.
+
 The domain logic uses a _Data Mapper_ for data source interactions (_BlogMapper_ et al.).
-
-The domain logic _BlogService_ class protects all its "real" service methods behind the magic `__call()` method. This allows the service to implement some functionality common to all the service methods, such as exception handling, though it does get in the way of IDE auto-completion.
-
-The domain logic _BlogService_ methods return a domain _Payload_ that wraps the domain results and includes a status indicator. This standardizes the domain return signature, makes the _BlogResponder_ work much more readable.
 
 ## _Responder_
 
