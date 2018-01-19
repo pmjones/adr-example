@@ -28,4 +28,4 @@ Each _Responder_ calls a method corresponding to the domain _Payload_ status to 
 
 The base _Responder_ class depends on a 3rd-party HTTP Request interface and Response object.
 
-The base _BlogResponder_ class depends on a 3rd-party PHP-based _Template View_ system. The templates are located in `resources/templates/`.
+The base _BlogResponder_ class depends on a 3rd-party PHP-based _Template View_ system. The templates are located in `resources/templates/blog/`.
