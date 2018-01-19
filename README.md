@@ -1,6 +1,6 @@
-# ADR Example
+# _Action Domain Responder_ Example
 
-This example shows an ADR subsystem, with the corresponding domain logic and data source elements, for a naive blogging system.
+This example shows an ADR user interface subsystem, with the corresponding domain logic and data source elements, for a naive blogging system.
 
 This is not a running example, in the sense that it cannot be dropped onto a web server and begin operating properly.
 
@@ -8,13 +8,13 @@ However, there is a full test suite in the `tests/` directory. (These are more p
 
 There is no authentication, authorization, or session mechanism included. While necessary in a real system, they would increase the complexity of the example and make it more difficult to discern the separation of concerns.
 
-## Action
+## _Action_
 
 The _Action_ classes depend on a 3rd-party HTTP Request object.
 
 Each _Action_ picks apart the incoming request to pass individual typhinted _Domain_ method arguments. A differently-constructed _Domain_ might require a different input signature, such as a data transfer object or a catch-all array of all possible request values.
 
-## Domain
+## _Domain_
 
 The domain logic uses a _Data Mapper_ for data source interactions (_BlogMapper_ et al.).
 
@@ -22,7 +22,7 @@ The domain logic _BlogService_ class protects all its "real" service methods beh
 
 The domain logic _BlogService_ methods return a domain _Payload_ that wraps the domain results and includes a status indicator. This standardizes the domain return signature, makes the _BlogResponder_ work much more readable.
 
-## Responder
+## _Responder_
 
 The _Responder_ classes depend on a 3rd-party HTTP Response object.
 
